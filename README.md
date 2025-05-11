@@ -1,3 +1,9 @@
+# Praktikum #1
+
+Nur die Aufgabe 2 wird hier behandelt.
+
+---
+
 # Grundlagen der Softwareentwicklung SOSE 2025
 
 Dieses Git repository enthält alle Praktiken der Vorlesung *Grundlagen der Softwareentwicklung* aus dem Sommersemester 2025 bei Professor Degen and der Technische Hochschule Augsburg **[THA]**.
@@ -9,10 +15,6 @@ Dieser `main` branch ist lediglich als Übersicht gedacht.
 
 ---
 
-
-
 **! -** Aufgaben, die außerhalb des tatsächlichen Praktikumsprojekts stattfinden (wie z.B. die Installation und das Set-Up von Java) werden hier nicht beachtet.
-
-
 
 

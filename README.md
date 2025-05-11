@@ -2,6 +2,9 @@
 
 Aufgabe vollständig bearbeitet.
 
+Zusatzaufgabe "Inventar" bearbeitet.
+> Das Praktikum 2 ohne Zusatzaufgaben ist in einem vorherigen Commit verfügbar
+
 ---
 
 # Grundlagen der Softwareentwicklung SOSE 2025

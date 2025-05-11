@@ -1,5 +1,6 @@
 package programs;
 
+import models.inventory.Inventory;
 import models.inventory.Item;
 import models.inventory.items.*;
 
@@ -8,8 +9,6 @@ public class Main
 
     public static void main(String[] args)
     {
-
-        Item[] items = new Item[5];
 
         Weapon sword = new Weapon("Sting", 1, 2, 5, 1, 15);
 
@@ -22,21 +21,15 @@ public class Main
 
         Item genericItem = new Item("Generic Item", 0, 0);
 
-        items[0] = sword;
-        items[1] = potionOfDeath;
-        items[2] = leatherArmor;
-        items[3] = steak;
-        items[4] = genericItem;
+        Inventory inventory = new Inventory(5);
 
-        // List it all out!
+        inventory.addItem(sword);
+        inventory.addItem(potionOfDeath);
+        inventory.addItem(leatherArmor);
+        inventory.addItem(steak);
+        inventory.addItem(genericItem);
 
-        for(Item item : items)
-        {
-            if(item == null)
-                continue;
-
-            item.list();
-        }
+        inventory.listAllItems();
 
     }
 

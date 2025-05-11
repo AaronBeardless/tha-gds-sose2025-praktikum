@@ -11,6 +11,11 @@ public class Food extends Item
 
     // --- Constructors ---
 
+    public Food()
+    {
+        this("Apple", 3, 1, new Effect("Nutritional", 7));
+    }
+
     public Food(String name, int ID, int weight, Effect effect)
     {
         super(name, ID, weight);

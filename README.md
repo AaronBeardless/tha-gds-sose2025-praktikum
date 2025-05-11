@@ -1,11 +1,7 @@
-# Praktikum #2
+# Praktikum #3
 
 Aufgabe vollständig bearbeitet.
 
-Zusatzaufgabe "Inventar" bearbeitet.
-Zusatzaufgabe "Effekthierarchie" bearbeitet.
-> Das Praktikum 2 ohne Zusatzaufgaben ist in einem vorherigen Commit verfügbar
-q
 ---
 
 # Grundlagen der Softwareentwicklung SOSE 2025

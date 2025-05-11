@@ -10,6 +10,11 @@ public class Effect
 
     // --- Constructors ---
 
+    public Effect()
+    {
+        this("Weird Effect", 1);
+    }
+
     public Effect(String effectType, int effectiveness)
     {
         this.effectType = effectType;

@@ -8,16 +8,19 @@ public class Weapon extends Item
     // --- Variables ---
 
     private int strength;
-    private int range;
     private int damage;
 
     // --- Constructors ---
 
-    public Weapon(String name, int ID, int weight, int strength, int range, int damage)
+    public Weapon()
+    {
+        this("Wooden Sword", 1, 3, 2, 5);
+    }
+
+    public Weapon(String name, int ID, int weight, int strength, int damage)
     {
         super(name, ID, weight);
         this.strength = strength;
-        this.range = range;
         this.damage = damage;
     }
 
@@ -31,16 +34,6 @@ public class Weapon extends Item
     public void setStrength(int strength)
     {
         this.strength = strength;
-    }
-
-    public int getRange()
-    {
-        return range;
-    }
-
-    public void setRange(int range)
-    {
-        this.range = range;
     }
 
     public int getDamage()
@@ -59,12 +52,12 @@ public class Weapon extends Item
     public void list()
     {
         super.list();
-        System.out.println("\t [WEAPON] \n \t\t Strength - '" + getStrength() + "' \n \t\t Range - '" + getRange() + "' \n \t\t Damage - '" + getDamage() + "'");
+        System.out.println("\t [WEAPON] \n \t\t Strength - '" + getStrength() + "' \n \t\t Damage - '" + getDamage() + "'");
     }
 
     public void determineAttack()
     {
-        System.out.println("Attack is '" + (getRange() * getDamage() * getStrength()) + "'.");
+        System.out.println("Attack is '" + (getDamage() * getStrength()) + "'.");
     }
 
 }

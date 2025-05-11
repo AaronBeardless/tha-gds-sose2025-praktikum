@@ -11,6 +11,11 @@ public class Armor extends Item
 
     // --- Constructors ---
 
+    public Armor()
+    {
+        this("Leather Armor", 2, 4, 5);
+    }
+
     public Armor(String name, int ID, int weight, int absorption)
     {
         super(name, ID, weight);

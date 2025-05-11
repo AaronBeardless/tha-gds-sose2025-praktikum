@@ -12,6 +12,11 @@ public class Item
 
     // --- Constructors ---
 
+    public Item()
+    {
+        this("The Mysterious floating Orb", 0, -5);
+    }
+
     public Item(String name, int ID, int weight)
     {
         this.name = name;

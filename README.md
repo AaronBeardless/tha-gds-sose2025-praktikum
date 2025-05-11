@@ -2,6 +2,8 @@
 
 Aufgabe vollständig bearbeitet.
 
+Zusatzaufgabe bearbeitet. Praktikum #3 ohne Zusatzaufgabe(n) ist in einem vorherigen Commit verfügbar.
+
 ---
 
 # Grundlagen der Softwareentwicklung SOSE 2025

@@ -44,6 +44,10 @@ public class Main
 
         inventory.listAllItems();
 
+        inventory.removeItem(potionOfDeath);
+
+        inventory.listAllItems();
+
     }
 
 }

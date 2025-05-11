@@ -7,26 +7,26 @@ public class Food extends Item
 
     // --- Variables ---
 
-    private int nutrition;
+    private Effect effect;
 
     // --- Constructors ---
 
-    public Food(String name, int ID, int weight, int nutrition)
+    public Food(String name, int ID, int weight, Effect effect)
     {
         super(name, ID, weight);
-        this.nutrition = nutrition;
+        this.effect = effect;
     }
 
     // --- Getters/Setters ---
 
-    public int getNutrition()
+    public Effect getEffect()
     {
-        return nutrition;
+        return effect;
     }
 
-    public void setNutrition(int nutrition)
+    public void setNutrition(Effect effect)
     {
-        this.nutrition = nutrition;
+        this.effect = effect;
     }
 
     // --- Functions ---
@@ -35,12 +35,23 @@ public class Food extends Item
     public void list()
     {
         super.list();
-        System.out.println("\t [FOOD] \n \t\t Strength - '" + getNutrition() + "'");
+        System.out.println("\t [FOOD] \n \t\t (Effect) --- \n \t\t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t\t Effectiveness - '" + getEffect().getEffectiveness() + "'");
     }
 
     public void cook()
     {
-        // Doubly tasty!
-        nutrition *= 2;
+        if(effect.getEffectType() == "Uncooked")
+        {
+            // We cook the meal, yum-yum!
+            effect = new Effect("Nutritional", getEffect().getEffectiveness() * 2);
+        }
+        else if (effect.getEffectType() == "Nutritional")
+        {
+            // We have either overcooked a meal or cooked something that isn't cookable, ew...
+            effect = new Effect("Unsavory", 1);
+        }
+
+        // Otherwise nothing happens
+
     }
 }

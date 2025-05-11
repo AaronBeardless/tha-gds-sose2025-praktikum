@@ -30,7 +30,7 @@ public class Potion extends Item
     public void list()
     {
         super.list();
-        System.out.println("\t [WEAPON] \n \t\t (Effect) --- \n \t\t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t\t Effectiveness - '" + getEffect().getEffectiveness() + "'");
+        System.out.println("\t [POTION] \n \t\t (Effect) --- \n \t\t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t\t Effectiveness - '" + getEffect().getEffectiveness() + "'");
     }
 
     public void determineEffect()

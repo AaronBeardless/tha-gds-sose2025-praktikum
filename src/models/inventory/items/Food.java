@@ -13,12 +13,12 @@ public class Food extends Item
 
     public Food()
     {
-        this("Apple", 3, 1, new Effect("Nutritional", 7));
+        this("Apple", 1, new Effect("Nutritional", 7));
     }
 
-    public Food(String name, int ID, int weight, Effect effect)
+    public Food(String name, int weight, Effect effect)
     {
-        super(name, ID, weight);
+        super(name, weight);
         this.effect = effect;
     }
 
@@ -39,8 +39,8 @@ public class Food extends Item
     @Override
     public void list()
     {
-        super.list();
-        System.out.println("\t [FOOD] \n \t\t (Effect) --- \n \t\t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t\t Effectiveness - '" + getEffect().getEffectiveness() + "'");
+        System.out.println("[ITEM - FOOD] \n \t ID - '" + getID() + "' \n \t Weight - '" + getWeight() + "' \n \t Name - '" + getName() + "'");
+        System.out.println("\t (Effect) --- \n \t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t Effectiveness - '" + getEffect().getEffectiveness() + "'");
     }
 
     public void cook()

@@ -13,12 +13,12 @@ public class RangedWeapon extends Weapon
 
     public RangedWeapon()
     {
-        this("Shortbow", 5, 4, 5, 5, 12);
+        this("Shortbow", 4, 5, 5, 12);
     }
 
-    public RangedWeapon(String name, int ID, int weight, int strength, int damage, int range)
+    public RangedWeapon(String name, int weight, int strength, int damage, int range)
     {
-        super(name, ID, weight, strength, damage);
+        super(name, weight, strength, damage);
         this.range = range;
     }
 
@@ -40,7 +40,7 @@ public class RangedWeapon extends Weapon
     public void list()
     {
         super.list();
-        System.out.println("\t\t [RANGED WEAPON] \n \t\t\t Range - '" + getRange() + "'");
+        System.out.println("\t [RANGED WEAPON] \n \t\t Range - '" + getRange() + "'");
     }
 
     @Override

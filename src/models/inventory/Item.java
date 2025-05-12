@@ -1,7 +1,16 @@
 package models.inventory;
 
-public class Item
+public abstract class Item
 {
+
+    // --- Static Variables ---
+
+    private static int itemCount = 0;
+
+    public static int getItemCount()
+    {
+        return itemCount;
+    }
 
     // --- Variables ---
 
@@ -14,13 +23,15 @@ public class Item
 
     public Item()
     {
-        this("The Mysterious floating Orb", 0, -5);
+        this("The Mysterious floating Orb", -5);
     }
 
-    public Item(String name, int ID, int weight)
+    public Item(String name, int weight)
     {
+        this.ID = getItemCount();
+        itemCount++;
+
         this.name = name;
-        this.ID = ID;
         this.weight = weight;
     }
 
@@ -53,9 +64,6 @@ public class Item
 
     // --- Functions ---
 
-    public void list()
-    {
-        System.out.println("[Item] \n \t ID - '" + getID() + "' \n \t Weight - '" + getWeight() + "' \n \t Name - '" + getName() + "'");
-    }
+    public abstract void list();
 
 }

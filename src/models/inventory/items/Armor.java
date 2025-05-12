@@ -13,12 +13,12 @@ public class Armor extends Item
 
     public Armor()
     {
-        this("Leather Armor", 2, 4, 5);
+        this("Leather Armor", 4, 5);
     }
 
-    public Armor(String name, int ID, int weight, int absorption)
+    public Armor(String name, int weight, int absorption)
     {
-        super(name, ID, weight);
+        super(name, weight);
         this.absorption = absorption;
     }
 
@@ -39,8 +39,8 @@ public class Armor extends Item
     @Override
     public void list()
     {
-        super.list();
-        System.out.println("\t [ARMOR] \n \t\t Absorption - '" + getAbsorption() + "'");
+        System.out.println("[ITEM - ARMOR] \n \t ID - '" + getID() + "' \n \t Weight - '" + getWeight() + "' \n \t Name - '" + getName() + "'");
+        System.out.println("\t Absorption - '" + getAbsorption() + "'");
     }
 
     public void determineDefense()

@@ -1,8 +1,6 @@
-# Praktikum #3
+# Praktikum #4
 
 Aufgabe vollständig bearbeitet.
-
-Zusatzaufgabe bearbeitet. Praktikum #3 ohne Zusatzaufgabe(n) ist in einem vorherigen Commit verfügbar.
 
 ---
 

@@ -14,12 +14,12 @@ public class Weapon extends Item
 
     public Weapon()
     {
-        this("Wooden Sword", 1, 3, 2, 5);
+        this("Wooden Sword", 3, 2, 5);
     }
 
-    public Weapon(String name, int ID, int weight, int strength, int damage)
+    public Weapon(String name, int weight, int strength, int damage)
     {
-        super(name, ID, weight);
+        super(name, weight);
         this.strength = strength;
         this.damage = damage;
     }
@@ -51,8 +51,8 @@ public class Weapon extends Item
     @Override
     public void list()
     {
-        super.list();
-        System.out.println("\t [WEAPON] \n \t\t Strength - '" + getStrength() + "' \n \t\t Damage - '" + getDamage() + "'");
+        System.out.println("[ITEM - WEAPON] \n \t ID - '" + getID() + "' \n \t Weight - '" + getWeight() + "' \n \t Name - '" + getName() + "'");
+        System.out.println("\t Strength - '" + getStrength() + "' \n \t Damage - '" + getDamage() + "'");
     }
 
     public void determineAttack()

@@ -13,12 +13,12 @@ public class MeleeWeapon extends Weapon
 
     public MeleeWeapon()
     {
-        this("Axe", 6, 5, 5, 3, 2);
+        this("Axe", 5, 5, 3, 2);
     }
 
-    public MeleeWeapon(String name, int ID, int weight, int strength, int damage, int sweep)
+    public MeleeWeapon(String name, int weight, int strength, int damage, int sweep)
     {
-        super(name, ID, weight, strength, damage);
+        super(name, weight, strength, damage);
         this.sweep = sweep;
     }
 
@@ -40,7 +40,7 @@ public class MeleeWeapon extends Weapon
     public void list()
     {
         super.list();
-        System.out.println("\t\t [MELEE WEAPON] \n \t\t\t Sweep - '" + getSweep() + "'");
+        System.out.println("\t [MELEE WEAPON] \n \t\t Sweep - '" + getSweep() + "'");
     }
 
     @Override

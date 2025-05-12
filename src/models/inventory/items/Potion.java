@@ -15,17 +15,17 @@ public class Potion extends Item
 
     public Potion()
     {
-        this("Useless Potion", 4, 2, new Effect());
+        this("Useless Potion", 2, new Effect());
     }
 
-    public Potion(String name, int ID, int weight, Effect effect)
+    public Potion(String name, int weight, Effect effect)
     {
-        this(name, ID, weight, effect, 2, 1);
+        this(name, weight, effect, 2, 1);
     }
 
-    public Potion(String name, int ID, int weight, Effect effect, int range, int tastiness)
+    public Potion(String name, int weight, Effect effect, int range, int tastiness)
     {
-        super(name, ID, weight);
+        super(name, weight);
         this.effect = effect;
         this.range = range;
         this.tastiness = tastiness;
@@ -63,8 +63,8 @@ public class Potion extends Item
     @Override
     public void list()
     {
-        super.list();
-        System.out.println("\t [POTION] \n \t\t (Effect) --- \n \t\t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t\t Effectiveness - '" + getEffect().getEffectiveness() + "' \n \t\t Range - '" + getRange() + "' \n \t\t Tastiness - '" + getTastiness() + "'");
+        System.out.println("[ITEM - POTION] \n \t ID - '" + getID() + "' \n \t Weight - '" + getWeight() + "' \n \t Name - '" + getName() + "'");
+        System.out.println("\t\t (Effect) --- \n \t\t Effect Type - '" + getEffect().getEffectType() + "' \n \t\t Effectiveness - '" + getEffect().getEffectiveness() + "' \n \t Range - '" + getRange() + "' \n \t Tastiness - '" + getTastiness() + "'");
     }
 
     public void determineEffect()

@@ -13,7 +13,7 @@ public class SnowMonster extends Monster
 
     public SnowMonster()
     {
-
+        this("Olaf", 5, 10);
     }
 
     public SnowMonster(String name, int strength, int freezeStrength)

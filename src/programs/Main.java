@@ -79,7 +79,8 @@ public class Main
         Hero john = new Hero("John Nolan", 10, 25, 50);
         Hero aloy = new Hero();
 
-        System.out.println("===FIGHT=RING============================");
+        System.out.println();
+        System.out.println("===FIGHT=RING======================");
 
         // Everybody fight!
 
@@ -91,6 +92,27 @@ public class Main
 
         aloy.fight(john);
 
+        System.out.println("===================================");
+
+    }
+
+    public static void testTaming()
+    {
+
+        System.out.println("===TAMING==========================");
+
+        Hero tamer = new Hero("Steve", 25, 50, 100);
+
+        Phoenix phoenix = new Phoenix();
+        SnowMonster snowy = new SnowMonster();
+
+        phoenix.getTamed(tamer);
+        snowy.getTamed(tamer);
+
+        phoenix.cuddle(5);
+
+        System.out.println("===================================");
+
     }
 
     public static void main(String[] args)
@@ -99,6 +121,8 @@ public class Main
         testInventory();
 
         testFight();
+
+        testTaming();
 
     }
 

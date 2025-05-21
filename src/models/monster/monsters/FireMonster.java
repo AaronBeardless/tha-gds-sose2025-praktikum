@@ -1,5 +1,6 @@
 package models.monster.monsters;
 
+import models.Hero;
 import models.monster.Monster;
 
 public class FireMonster extends Monster

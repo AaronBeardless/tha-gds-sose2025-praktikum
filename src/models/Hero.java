@@ -1,8 +1,12 @@
 package models;
 
 import models.monster.Monster;
+import models.monster.traits.Companion;
 
-public class Hero
+import java.util.ArrayList;
+import java.util.List;
+
+public class Hero implements Tamer
 {
 
     // --- Variables ---
@@ -10,6 +14,8 @@ public class Hero
     private String name;
     private int strength;
     private int health;
+
+    private List<Companion> companions;
 
     private final int MAX_HEALTH;
 
@@ -38,6 +44,8 @@ public class Hero
         }
 
         this.health = health;
+
+        companions = new ArrayList<>();
 
     }
 
@@ -91,6 +99,18 @@ public class Hero
 
     // --- Functions ---
 
+    @Override
+    public void addCompanion(Companion companion)
+    {
+        companions.add(companion);
+    }
+
+    @Override
+    public void receiveCuddle(int cuddleIntensity)
+    {
+        System.out.println("Hero '" + getName() + "' has received an intensity '" + cuddleIntensity + "' cuddle.");
+    }
+
     public void fight(Monster foe)
     {
         if(getStrength() < foe.getStrength() || getHealth() == 0)
@@ -127,4 +147,5 @@ public class Hero
         foe.setHealth(foe.getHealth() - 1);
         setHealth(getHealth() + 1);
     }
+
 }

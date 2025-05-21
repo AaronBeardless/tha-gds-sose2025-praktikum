@@ -1,5 +1,6 @@
 package models.monster.monsters;
 
+import models.Hero;
 import models.monster.Monster;
 
 public class SnowMonster extends Monster
@@ -56,6 +57,12 @@ public class SnowMonster extends Monster
         // Doubling code... grrr!
         if(getStrength() > foe.getStrength())
             freeze(foe);
+    }
+
+    @Override
+    public void getTamed(Hero tamer)
+    {
+        System.out.println("Snow Monsters will never be tamed!");
     }
 
     public void freeze(Monster foe)

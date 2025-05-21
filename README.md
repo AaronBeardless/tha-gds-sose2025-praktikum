@@ -1,9 +1,3 @@
-# Custom Linked List
-
-Eine Implementierung einer Linked List zur Veranschaulichung.
-
----
-
 # Grundlagen der Softwareentwicklung SOSE 2025
 
 Dieses Git repository enthält alle Praktiken der Vorlesung *Grundlagen der Softwareentwicklung* aus dem Sommersemester 2025 bei Professor Degen and der Technische Hochschule Augsburg **[THA]**.
@@ -16,3 +10,7 @@ Dieser `main` branch ist lediglich als Übersicht gedacht.
 ---
 
 **! -** Aufgaben, die außerhalb des tatsächlichen Praktikumsprojekts stattfinden (wie z.B. die Installation und das Set-Up von Java) werden hier nicht beachtet.
+
+---
+
+Lizenziert mit der MIT-Lizenz. *(Für Details: [LICENSE.md](LICENSE.md))*

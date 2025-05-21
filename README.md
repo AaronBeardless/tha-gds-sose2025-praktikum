@@ -1,6 +1,6 @@
-# Praktikum #4
+# Custom Linked List
 
-Aufgabe vollständig bearbeitet.
+Eine Implementierung einer Linked List zur Veranschaulichung.
 
 ---
 

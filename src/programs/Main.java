@@ -1,104 +1,43 @@
 package programs;
 
-import models.Hero;
-import models.inventory.Inventory;
-import models.inventory.Item;
-import models.inventory.items.*;
-import models.inventory.items.weapons.MeleeWeapon;
-import models.inventory.items.weapons.RangedWeapon;
-import models.monster.Monster;
-import models.monster.monsters.FireMonster;
-import models.monster.monsters.SnowMonster;
-import models.monster.monsters.firemonsters.Phoenix;
+import models.CustomLinkedList;
+import models.ListElement;
 
 public class Main
 {
 
-    private static void printItemCount()
-    {
-        System.out.println("Current Item Count: '" + Item.getItemCount() + "'.");
-    }
-
-    private static void testInventory()
-    {
-
-        Weapon sword = new Weapon("Sting", 2, 5, 1);
-
-        printItemCount();
-
-        Effect poison = new Effect("Poison", 5);
-        Potion potionOfDeath = new Potion("The Potion of Instant Harm", 1, poison);
-
-        printItemCount();
-
-        Armor leatherArmor = new Armor("Leather Armor", 4, 10);
-
-        printItemCount();
-
-        Effect uncooked = new Effect("Uncooked", 5);
-        Food steak = new Food("Steak", 1, uncooked);
-
-        printItemCount();
-
-        Inventory inventory = new Inventory(12);
-
-        inventory.addItem(sword);
-        inventory.addItem(potionOfDeath);
-        inventory.addItem(leatherArmor);
-        inventory.addItem(steak);
-        inventory.addItem(new Food());
-        inventory.addItem(new Armor());
-        inventory.addItem(new Weapon());
-        inventory.addItem(new Potion());
-        inventory.addItem(new MeleeWeapon());
-        inventory.addItem(new RangedWeapon());
-        inventory.addItem(new Food());
-        inventory.addItem(new RangedWeapon());
-
-        // This should throw an error
-        inventory.addItem(new Food());
-
-        inventory.listAllItems();
-
-        inventory.removeItem(potionOfDeath);
-
-        inventory.listAllItems();
-
-        printItemCount();
-
-    }
-
-    private static void testFight()
-    {
-
-        FireMonster ghast = new FireMonster("Ghast", 10, 2);
-        SnowMonster snowman = new SnowMonster("Snowman", 10, 2);
-
-        Phoenix fawkes = new Phoenix();
-
-        Hero john = new Hero("John Nolan", 10, 25, 50);
-        Hero aloy = new Hero();
-
-        System.out.println("===FIGHT=RING============================");
-
-        // Everybody fight!
-
-        ghast.fight(snowman);
-        snowman.fight(fawkes);
-
-        john.fight(ghast);
-        aloy.fight(fawkes);
-
-        aloy.fight(john);
-
-    }
-
     public static void main(String[] args)
     {
 
-        testInventory();
+        ListElement<Integer> integerListElement1 = new ListElement<Integer>(1);
+        ListElement<Integer> integerListElement2 = new ListElement<Integer>(2);
+        ListElement<Integer> integerListElement3 = new ListElement<Integer>(3);
+        ListElement<Integer> integerListElement4 = new ListElement<Integer>(4);
+        ListElement<Integer> integerListElement5 = new ListElement<Integer>(5);
 
-        testFight();
+        CustomLinkedList<Integer> integerList = new CustomLinkedList<Integer>();
+
+        integerList.addToEnd(integerListElement1);
+        integerList.addToEnd(integerListElement2);
+        integerList.addToFront(integerListElement3);
+        integerList.addToFront(integerListElement4);
+        integerList.addAtIndex(1, integerListElement5);
+
+        integerList.printList();
+
+        System.out.println("===ERROR_TESTING======================");
+
+        ListElement<String> stringListElement1 = new ListElement<String>("Number #1");
+        ListElement<String> stringListElement2 = new ListElement<String>("Number #2");
+        ListElement<String> stringListElement3 = new ListElement<String>("Number #3");
+        ListElement<String> stringListElement4 = new ListElement<String>("Number #4");
+        ListElement<String> stringListElement5 = new ListElement<String>("Number #5");
+
+        CustomLinkedList<String> stringList = new CustomLinkedList<String>();
+
+        stringList.addToFront(stringListElement1);
+        stringList.addAtIndex(5, stringListElement2);
+        stringList.addAtIndex(-2, stringListElement4);
 
     }
 

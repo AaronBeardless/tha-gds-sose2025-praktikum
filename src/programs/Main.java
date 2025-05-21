@@ -66,6 +66,8 @@ public class Main
 
         printItemCount();
 
+        // Test iterable
+
         for(Item item : inventory)
         {
             item.list();

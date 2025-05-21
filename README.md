@@ -16,3 +16,7 @@ Dieser `main` branch ist lediglich als Übersicht gedacht.
 ---
 
 **! -** Aufgaben, die außerhalb des tatsächlichen Praktikumsprojekts stattfinden (wie z.B. die Installation und das Set-Up von Java) werden hier nicht beachtet.
+
+---
+
+Lizenziert mit der MIT-Lizenz. *(Für Details: [LICENSE.md](LICENSE.md))*

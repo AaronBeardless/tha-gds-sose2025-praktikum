@@ -66,6 +66,11 @@ public class Main
 
         printItemCount();
 
+        for(Item item : inventory)
+        {
+            item.list();
+        }
+
     }
 
     private static void testFight()

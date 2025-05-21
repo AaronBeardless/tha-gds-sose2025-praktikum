@@ -1,9 +1,10 @@
 package models.inventory;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Inventory
+public class Inventory implements Iterable<Item>
 {
 
     // --- Variables ---
@@ -20,6 +21,12 @@ public class Inventory
     }
 
     // --- Functions ---
+
+    @Override
+    public Iterator<Item> iterator()
+    {
+        return items.iterator();
+    }
 
     public void addItem(Item item)
     {
@@ -66,5 +73,4 @@ public class Inventory
         items.remove(index);
 
     }
-
 }
